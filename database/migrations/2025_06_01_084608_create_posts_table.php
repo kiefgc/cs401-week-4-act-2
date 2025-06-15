@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('publication_date')->nullable()->comment('publication date');
             $table->timestamp('last_modified_date')->nullable()->comment('last modified date');
             $table->string('status')->comment('d - draft, p - published, i - inactive');
-            $table->string('featured_image_url')->comment('featured image url');
+            $table->text('featured_image_url')->comment('featured image url');
             $table->integer('views_count')->default(0)->comment('number of views');
             $table->timestamps();
         });
